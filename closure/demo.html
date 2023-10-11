@@ -1,0 +1,24 @@
+
+<script>
+
+    //The outer fiunction serves as the containing or enclosing function for inner
+    function outer() {
+        var outerVar = 10;
+
+        //The inner function is defined within the scope of the outer function/ The inner can access the outerVar variable as it is within the scope of the outer function
+        function inner() {
+            console.log(outerVar)
+        }
+
+        return inner
+    }
+
+    //Here the outer function is called and the result is assigned to the variable closure.
+    var closure = outer()
+    //closure variable is invoked by adding ()
+    closure()
+
+
+    //So, in this code inner is the closure function as it is closed over an outer function naming outer.
+</script>
+
